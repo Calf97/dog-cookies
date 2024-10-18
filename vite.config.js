@@ -3,5 +3,5 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   plugins: [vue()],
-  base: "https://Calf97.github.io/todo-list/",
-});
+  base: "https://Calf97.github.io/dog-cookies/",
+})
