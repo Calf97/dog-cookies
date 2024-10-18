@@ -96,10 +96,11 @@
     <script>
 
       window.onload = () => {
-          console.log("Carreguei...");
+          document.getElementById('banner').style.display = 'none'; 
+
           const storage_cookie = window.localStorage.getItem('consentCookies');
           if (!storage_cookie) {
-              document.getElementById('banner').style.display = 'none'; 
+              document.getElementById('banner').style.display = 'block'; 
           }
       };
 
