@@ -94,13 +94,15 @@
     </div>
     <script type="module" src="/src/main.js"></script>
     <script>
-      window.onload(() => {
-        console.log("Carreguei...")
-        const storage_cookie = window.localStorage.getItem('consentCookies');
-        if(!storage_cookie){
-          window.document.getElementById('banner').style.display = 'none';
-        }
-      })
+
+      window.onload = () => {
+          console.log("Carreguei...");
+          const storage_cookie = window.localStorage.getItem('consentCookies');
+          if (!storage_cookie) {
+              document.getElementById('banner').style.display = 'none'; 
+          }
+      };
+
       function aceitarCookies(){
         window.localStorage.setItem('consentCookies', true);
         window.location.reload();
