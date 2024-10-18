@@ -26,7 +26,7 @@
         align-items: center;
         font-size: 30px;
       }
-      .banner {
+      #banner {
         border: 1px solid #ccc;
         background-color: antiquewhite;
         border-radius: 8px;
@@ -84,7 +84,7 @@
     <!-- End Google Tag Manager (noscript) -->
     <div class="container">
       <div id="app"></div>
-      <div class="banner">
+      <div id="banner">
         <p>Permissão de cookies para melhorar experiência do usuário!</p>
         <div class="c-btn">
           <button id="aceitar" onclick="aceitarCookies()">Aceitar</button>
@@ -94,12 +94,21 @@
     </div>
     <script type="module" src="/src/main.js"></script>
     <script>
+      window.onload(() => {
+        console.log("Carreguei...")
+        const storage_cookie = window.localStorage.getItem('consentCookies');
+        if(!storage_cookie){
+          window.document.getElementById('banner').style.display = 'none';
+        }
+      })
       function aceitarCookies(){
-        window.localStorage.setItem('consentCookies', true)
+        window.localStorage.setItem('consentCookies', true);
+        window.location.reload();
       }
       function negarCookies(){
-        window.localStorage.setItem('consentCookies', false)
-      }
+        window.localStorage.setItem('consentCookies', false);
+        window.location.reload();
+        }
     </script>
   </body>
 </html>
