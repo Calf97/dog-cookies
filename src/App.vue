@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div class="app">Tela Principal <></div>
+  <div class="app">Tela Principal</div>
 </template>
 
 <style>
