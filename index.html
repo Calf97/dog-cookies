@@ -87,11 +87,19 @@
       <div class="banner">
         <p>Permissão de cookies para melhorar experiência do usuário!</p>
         <div class="c-btn">
-          <button id="aceitar">Aceitar</button>
-          <button id="negar">Negar</button>
+          <button id="aceitar" onclick="aceitarCookies()">Aceitar</button>
+          <button id="negar" onclick="negarCookies()">Negar</button>
         </div>
       </div>
     </div>
     <script type="module" src="/src/main.js"></script>
+    <script>
+      function aceitarCookies(){
+        window.localStorage.setItem('consentCookies', true)
+      }
+      function negarCookies(){
+        window.localStorage.setItem('consentCookies', false)
+      }
+    </script>
   </body>
 </html>
